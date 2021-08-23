@@ -4,7 +4,7 @@ import './Login.css';
 const Login = () => {
 	return(
 		<div className="login-wrapper">
-			<h1>Por favor leggeate!</h1>
+			<h1>Por favor loggeate!</h1>
 			<form>
 				<label>
 					<p>Username</p>
@@ -15,7 +15,7 @@ const Login = () => {
 					<input type="password" />
 				</label>
 				<div>
-					<button type="submit">Submit</button>
+					<button type="submit">Ingresar</button>
 				</div>
 			</form>
 		</div>

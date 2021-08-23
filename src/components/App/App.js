@@ -7,21 +7,26 @@ import Login from '../Login/Login';
 
 function App() {
 	const [ token, setToken ] = useState();
-  return (
-    <div className="wrapper">
-		<h1>Apps</h1>
-		<BrowserRouter>
-			<Switch>
-				<Route path="/dashboard">
-					<Dashboard />
-				</Route>
-				<Route path="/preferences">
-					<Preferences />
-				</Route>
-			</Switch>
-		</BrowserRouter>
-    </div>
-  );
+
+	if(!token) {
+		return <Login setToken={setToken} />
+	}
+
+	return (
+		<div className="wrapper">
+			<h1>Apps</h1>
+			<BrowserRouter>
+				<Switch>
+					<Route path="/dashboard">
+						<Dashboard />
+					</Route>
+					<Route path="/preferences">
+						<Preferences />
+					</Route>
+				</Switch>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
